@@ -2,8 +2,10 @@
 <hr>
 <ul>
   <div *ngFor='let quote of quotes;let i = index'>
-    <h4 id="{{i}}" appHighlight>{{quote.message}}</h4>
+    <h4 id="{{i}}" appHighlight>{{quote.message}} <br>Designed on {{quote.entryDate|date}}</h4>
+
     <button (click)='toogleDetails(i)'>Show Author</button>
+
     <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-details>
   </div>
 </ul>
