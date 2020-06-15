@@ -1,12 +1,10 @@
-# Quotes Independent Project
-
-This is the first Independent project for Moringa Core, May 25th, 2018.
+# Inspirations and Motivational Quotes
 The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
 
 ## Description
 
-The Quotes Angular application allows users to create quotes and have those quotes voted on whether they are terrible or are inspirational.
+This is a web app developed using angular and it works in a way that the user input Quotes of their choices and it displays them
 
 ## Features
 
