@@ -1,5 +1,5 @@
 # Inspirations and Motivational Quotes
-The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
 
 
 ## Description
@@ -24,15 +24,16 @@ This is a web app developed using angular and it works in a way that the user in
 | Downvote |Click `more details` then click `downvote` button |  Increased number of downvotes|
 | Delete a quote | Click `more details` then click `delete quote`| Quote is deleted |
 
-## Known Bugs
+##  Bugs
 The highest number of votes does not highlight.
+The users name when submiting the input does not display
 
 
 ## Live Website
 View the complete site [here](https://ellykiplaa.github.io/Angular-App/)
 
 ## Technologies Used
-It is built using Angular JS, HTML, Bootstrap.
+It is built using Angular JS, HTML, Bootstrap, GitHub ,Nodejs,VsCode.
 
 ## Contributors
  - Eli Kiplangat 
