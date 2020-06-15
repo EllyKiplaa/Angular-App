@@ -4,31 +4,31 @@
       <form (ngSubmit)='submitQuote()'#quoteForm='ngForm'>
                 <div class="form-group">
 
-                    <label for="message"><h4>Write Your Quote</h4></label>
-                    <textarea class="form-control" id="message" rows="4" [(ngModel)]="newQuote.message" name="message" #message="ngModel" required></textarea>
-                      <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
+                    <label for="message"><h4>Write a Quote</h4></label>
+                    <textarea class="form-control" id="message" rows="4" [(ngModel)]="newQuote.message"  cols="80" rows="5" name="comment" name="message" #message="ngModel" required></textarea>
+                      <div [hidden]="message.valid || message.dirty" class="alert alert-danger">
 
 
                 </div>
               </div>
                 <div class="form-group">
 
-                    <label for="details"><h4>Your Name</h4></label>
+                    <label for="details"><h4>Author</h4></label>
                      <input type="text"  class="form-control" id="details" [(ngModel)]="newQuote.details" name="details" #details="ngModel" required>
-                     <div [hidden]="details.valid || details.pristine" class="alert alert-danger">
+                     <div [hidden]="details.valid || details.dirty" class="alert alert-danger">
 
 
                 </div>
               </div>
                 <div class="form-group">
                     <label for="entryDate"><h6>Written On</h6></label>
-                    <input type='date' id="entryDate" [(ngModel)]="newQuote.entryDate" name="entryDate" #entryDate="ngModel" required >
-                    <div [hidden]="entryDate.valid || entryDate.pristine" class="alert alert-danger">
+                    <input type='date' id="entryDate" [(ngModel)]="newQuote.entryDate" name="entryDate" size="100" #entryDate="ngModel" required >
+                    <div [hidden]="entryDate.valid || entryDate.dirty" class="alert alert-danger">
 
 
                 </div>
               </div>
-              <button type="Submit" class="btn btn-success btn-lg" id="addQuote">Add Quote</button>
+              <button type="Submit" class="btn btn-secondary btn-lg" id="addQuote">Add Quote</button>
 
 
       </form>
