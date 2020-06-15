@@ -63,7 +63,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ---------
 ### MIT License
 
-Copyright (c) [2018] [Sophia Njeri Murage]
+Copyright (c) [2020] [Eli Kiplangat Kirui]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
