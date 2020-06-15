@@ -31,7 +31,7 @@ The highest number of votes does not highlight.
 
 
 ## Live Website
-View the complete site [here]
+View the complete site [here](https://ellykiplaa.github.io/Angular-App/)
 
 ## Technologies Used
 It is built using Angular JS, HTML, Bootstrap.

@@ -15,7 +15,7 @@
 
                     <label for="details"><h4>Author</h4></label>
                      <input type="text"  class="form-control" id="details" [(ngModel)]="newQuote.details" name="details" #details="ngModel" required>
-                     <div [hidden]="details.valid || details.dirty" class="alert alert-danger">
+                     <div [hidden]="details.valid || details" class="alert alert-danger">
 
 
                 </div>
@@ -28,6 +28,12 @@
 
                 </div>
               </div>
+              <div class="form-group">
+                <label for="submittedBy"><h6>Submitted  by</h6></label>
+                <input type="text"  class="form-control" id="submittedBy" [(ngModel)]="newQuote.submittedBy" name="submittedBy" #submittedBy="ngModel" required>
+                <div [hidden]="submittedBy.valid || submittedBy.dirty" class="alert alert-danger">
+                </div>
+            </div>
               <button type="Submit" class="btn btn-secondary btn-lg" id="addQuote">Add Quote</button>
 
 
