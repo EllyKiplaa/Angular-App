@@ -2,32 +2,45 @@
 <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
 <div class="wrapper">
 
+<div>
+</div>
+  <div id="main">
+    <div class="container-fluid">
+      <div class="row">
 
-<!-- <div class="container">
-  <div class="row">
-    <h1>Your Favorite Quotes</h1>
-    <hr> -->
+        <div class="col-md-12 form">
+          <div class="container">
+            <div class="row">
+              <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="container">
-  <div class="row">
-  <div class="col-md-6 main-right" id="order">
-    <ul>
-      <div *ngFor='let quote of quotes;let i = index'>
-        <h4 id="{{i}}" appHighlight>{{quote.message}} <br>Designed on {{quote.entryDate|date}}</h4>
+<div id="quotesection">
+  <div class="container-fluid">
+   <div class="row">
 
-        <button (click)='toogleDetails(i)' class="btn btn-info">Show Author</button>
+    <div class="col-sm-6 col-md-4 col-lg-4 quotes" *ngFor='let quote of quotes;let i = index'>
+     <div class="card">
+      <div class="card-body" >
+        <p class="quotedescription" id="{{i}}" appHighlight>"{{quote.message}}"</p>
+      </div>
+      Designed on {{quote.entryDate|date}}
+      <div class="card-footer">
 
+        <button (click)='toogleDetails(i)' class="btn btn-info"> Show Author</button>
+        </div>
         <div class ="row" *ngIf="quote.showDetails">
         <app-quote-details  [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-details>
-           </div>
-          </div>
-             </ul>
-                 <div class="col-md-6">
-     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-    </div>
-
       </div>
+      </div>
+    </div>
+   </div>
   </div>
-</div>
+  </div>
+  </div>
 
- 
+
