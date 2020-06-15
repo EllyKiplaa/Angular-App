@@ -1,5 +1,10 @@
 # Quote
 
+## Features
+
+1.Allows users to enter quotes and display back to the user.
+2.The user can view the Quotes, author and number of days it was logged which appear on the quote section
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
 ## Development server

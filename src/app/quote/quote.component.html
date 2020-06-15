@@ -1,12 +1,33 @@
-<h1>Your Favorite Quotes</h1>
-<hr>
-<ul>
-  <div *ngFor='let quote of quotes;let i = index'>
-    <h4 id="{{i}}" appHighlight>{{quote.message}} <br>Designed on {{quote.entryDate|date}}</h4>
 
-    <button (click)='toogleDetails(i)'>Show Author</button>
+<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+<div class="wrapper">
 
-    <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-details>
+
+<!-- <div class="container">
+  <div class="row">
+    <h1>Your Favorite Quotes</h1>
+    <hr> -->
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-6 main-right" id="order">
+    <ul>
+      <div *ngFor='let quote of quotes;let i = index'>
+        <h4 id="{{i}}" appHighlight>{{quote.message}} <br>Designed on {{quote.entryDate|date}}</h4>
+
+        <button (click)='toogleDetails(i)' class="btn btn-info">Show Author</button>
+
+        <div class ="row" *ngIf="quote.showDetails">
+        <app-quote-details  [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-details>
+           </div>
+          </div>
+             </ul>
+                 <div class="col-md-6">
+     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+
+      </div>
   </div>
-</ul>
+</div>
 
+ 

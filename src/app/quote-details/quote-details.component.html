@@ -1,4 +1,6 @@
+<div class>
 <p>{{quote.details}}</p>
+<button type="button" class="btn btn-default btn-sm" (click)=submitUpvote(quote)><span class="glyphicon glyphicon-thumbs-up"></span> upvote </button>
 <p>This quote was designed in{{quote.entryDate|dateCount}} days</p>
-<button (click)= 'quoteComplete(true)'>Delete</button>
-
+<button (click)= 'quoteComplete(true)' class="btn btn-outline-danger">Delete Quote</button>
+</div>

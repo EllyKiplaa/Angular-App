@@ -1,23 +1,21 @@
-import { Directive,ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef,Input ,HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]'
 })
 export class HighlightDirective {
 
-  constructor(private elem:ElementRef) { }
+  constructor(private elem:ElementRef) {}
 
-  @HostListener("click") onClicks( ){
-    this.textDeco("Red")
-  }
+  @HostListener("click") onClicks(){
+   this.textDeco("Red")
+ }
 
-  @HostListener("dblclick") onDoubleClicks(){
-    this.textDeco("None");
-  }
-
+ @HostListener("dblclick") onDoubleClicks(){
+   this.textDeco("Null")
+ }
   private textDeco(color:string){
-    this.elem.nativeElement.style.backgroundColor='color';
-
-   }
+  this.elem.nativeElement.style.backgroundColor = color;
+  }
 
 }
