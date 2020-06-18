@@ -1,10 +1,11 @@
 <div class="container">
-<p>{{quote.details}}</p>
-<button type="button" class="btn btn-default btn-sm" (click)=upvote(quote)> <span class="glyphicon glyphicon-thumbs-up"> </span>upvote⬆️ </button>
-<span class="vote">{{quote.upvote}}</span>
-<button type="button" class="btn btn-default btn-sm" (click)=downvote(quote)> <span  class="glyphicon glyphicon-thumbs-up"> </span>  downvote⬇️ </button>
-<span class="vote">{{quote.downvote}}</span>
-<p>This quote was designed in{{quote.entryDate|dateCount}} days ago</p>
-<button (click)= 'quoteComplete(true)' class="btn btn-outline-danger">Delete Quote</button>
-</div>
+  <p>{{quote.description}}</p>
+  <button type="button" class="btn btn-secondary " (click)=upvote(quote)>upvote⏫ </button>
+  <span>{{quote.upvote}}</span>
+  <button type="button" class="btn btn-secondary" (click)=downvote(quote)> downvote⏬ </button>
+  <span>{{quote.downvote}}</span>
+  <p>This quote was designed in{{quote.entryDate|dateCount}} days ago</p>
+  <p>This quote was designed by~{{quote.submittedBy}}</p>
+  <button (click)= 'quoteComplete(true)' class="btn btn-outline-danger">Delete Quote</button>
+  </div>
 

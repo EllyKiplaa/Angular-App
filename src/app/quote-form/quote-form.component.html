@@ -1,40 +1,32 @@
 <div class=fom>
-<div class="container-fluid" id="bodyForm">
-  <div class="row">
+<div class="container-fluid">
+   <div class="row">
       <form (ngSubmit)='submitQuote()'#quoteForm='ngForm'>
                 <div class="form-group">
-
                     <label for="message"><h4>Write a Quote</h4></label>
                     <textarea class="form-control" id="message" rows="4" [(ngModel)]="newQuote.message"  cols="80" rows="5" name="comment" name="message" #message="ngModel" required></textarea>
-                      <div [hidden]="message.valid || message.dirty" class="alert alert-danger">
-
-
+                      <div [hidden]="message.valid || message" class="alert alert-danger">
                 </div>
               </div>
                 <div class="form-group">
-
-                    <label for="details"><h4>Author</h4></label>
-                     <input type="text"  class="form-control" id="details" [(ngModel)]="newQuote.details" name="details" #details="ngModel" required>
-                     <div [hidden]="details.valid || details" class="alert alert-danger">
-
-
+                    <label for="description"><h4>Author</h4></label><br>
+                     <input type="text"  class="form-control" id="description" [(ngModel)]="newQuote.description" name="details" #description="ngModel" required>
+                     <div [hidden]="description.valid || description" class="alert alert-danger">
                 </div>
               </div>
                 <div class="form-group">
-                    <label for="entryDate"><h6>Written On</h6></label>
+                    <label for="entryDate"><h4>Written On</h4></label><br>
                     <input type='date' id="entryDate" [(ngModel)]="newQuote.entryDate" name="entryDate" size="100" #entryDate="ngModel" required >
-                    <div [hidden]="entryDate.valid || entryDate.dirty" class="alert alert-danger">
-
-
+                    <div [hidden]="entryDate.valid || entryDate" class="alert alert-danger">
                 </div>
               </div>
               <div class="form-group">
-                <label for="submittedBy"><h6>Submitted  by</h6></label>
+                <label for="submittedBy"><h4>Submitted by</h4></label><br>
                 <input type="text"  class="form-control" id="submittedBy" [(ngModel)]="newQuote.submittedBy" name="submittedBy" #submittedBy="ngModel" required>
-                <div [hidden]="submittedBy.valid || submittedBy.dirty" class="alert alert-danger">
+                <div [hidden]="submittedBy.valid || submittedBy" class="alert alert-danger">
                 </div>
             </div>
-              <button type="Submit" class="btn btn-secondary btn-lg" id="addQuote">Add Quote</button>
+              <button type="Submit" class="btn btn-primary" id="addQuote">Add New Quote</button>
 
 
       </form>
